@@ -84,7 +84,26 @@ form button {
   position: relative;
   margin-top: 30px;
   margin-bottom: 30px;
-  left: 50%;
+  left: 33%;
+  transform: translate(-50%, 0);
+  font-family: inherit;
+  color: white;
+  background: #000000;
+  outline: none;
+  border: none;
+  padding: 5px 15px;
+  font-size: 1.3em;
+  font-weight: 400;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px rgba(51, 51, 51, 0.4);
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+form button2 {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  left: 33%;
   transform: translate(-50%, 0);
   font-family: inherit;
   color: white;
@@ -119,12 +138,13 @@ form button:hover {
 <form>
   <header>Formulario de Ingreso</header>
   <label>Nombre de Usuario <spanspan>*</spanspan></label>
-  <input/>
+  <!-- <input/> -->
+  <input type="email" name="email" placeholder="Ingrese su Email">
   <div class="help">Al menos 6 caracteres</div>
   <label>Contraseña <span>*</span></label>
-  <input/>
+  <input type="password" name="passwords" placeholder="Ingrese su Clave">
   <div class="help">Usar mayusculas y minusculas</div>
-  <button>INGRESAR</button>
+  <button>INGRESAR</button><button2>OLVIDE MI CLAVE!</button2>
 </form>
     
     
