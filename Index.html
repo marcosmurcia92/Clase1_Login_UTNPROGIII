@@ -1,8 +1,196 @@
-<html>
+<!DOCTYPE HTML>
+<html lang="es">
 <head>
-	<title>Clase 1 - Login - UTNPROGIII</title>
+    <title>Clase 1 - Registro - ProgIII</title>
 </head>
-<body>
+<style type="text/css">
+    #wrapper {
+        width:450px;
+        margin:0 auto;
+        font-family:Verdana, sans-serif;
+    }
+    legend {
+        color:#0481b1;
+        font-size:16px;
+        padding:0 10px;
+        background:#fff;
+        -moz-border-radius:4px;
+        box-shadow: 0 1px 5px rgba(4, 129, 177, 0.5);
+        padding:5px 10px;
+        text-transform:uppercase;
+        font-family:Helvetica, sans-serif;
+        font-weight:bold;
+    }
+    fieldset {
+        border-radius:4px;
+        background: #fff; 
+        background: -moz-linear-gradient(#fff, #f9fdff);
+        background: -o-linear-gradient(#fff, #f9fdff);
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#f9fdff)); /
+        background: -webkit-linear-gradient(#fff, #f9fdff);
+        padding:20px;
+        border-color:rgba(4, 129, 177, 0.4);
+    }
+    input,
+    textarea {
+        color: #373737;
+        background: #fff;
+        border: 1px solid #CCCCCC;
+        color: #aaa;
+        font-size: 14px;
+        line-height: 1.2em;
+        margin-bottom:15px;
 
+        -moz-border-radius:4px;
+        -webkit-border-radius:4px;
+        border-radius:4px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset, 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="number"],
+    input[type="email"]{
+        padding: 8px 6px;
+        height: 22px;
+        width:280px;
+    }
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="number"]:focus,
+    input[type="email"]:focus {
+        background:#f5fcfe;
+        text-indent: 0;
+        z-index: 1;
+        color: #373737;
+        -webkit-transition-duration: 400ms;
+        -webkit-transition-property: width, background;
+        -webkit-transition-timing-function: ease;
+        -moz-transition-duration: 400ms;
+        -moz-transition-property: width, background;
+        -moz-transition-timing-function: ease;
+        -o-transition-duration: 400ms;
+        -o-transition-property: width, background;
+        -o-transition-timing-function: ease;
+        width: 380px;
+        
+        border-color:#ccc;
+        box-shadow:0 0 5px rgba(4, 129, 177, 0.5);
+        opacity:0.6;
+    }
+    input[type="submit"]{
+        background: #222;
+        border: none;
+        text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+        text-transform:uppercase;
+        color: #eee;
+        cursor: pointer;
+        font-size: 15px;
+        margin: 5px 0;
+        padding: 5px 22px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-border-radius:4px;
+        -webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+        box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+    }
+    textarea {
+        padding:3px;
+        width:96%;
+        height:100px;
+    }
+    textarea:focus {
+        background:#ebf8fd;
+        text-indent: 0;
+        z-index: 1;
+        color: #373737;
+        opacity:0.6;
+        box-shadow:0 0 5px rgba(4, 129, 177, 0.5);
+        border-color:#ccc;
+    }
+    .small {
+        line-height:14px;
+        font-size:12px;
+        color:#999898;
+        margin-bottom:3px;
+    }
+    .medium {
+        line-height:14px;
+        font-size:16px;
+        color:#999898;
+        margin-bottom:3px;
+    }
+</style>
+<body>
+    <div id="wrapper">
+        <form action="" method="post">
+            <fieldset>
+                <legend>Formulario de Registro</legend>
+                <div>
+                    <input type="text" name="first_name" placeholder="Nombre"/>
+                </div>
+                <div>
+                    <input type="text" name="last_name" placeholder="Apellido"/>
+                </div>
+                <div>
+                    <input type="password" name="password" placeholder="Clave"/>
+                </div>
+                <div>
+                    <input type="password" name="confirmPassword" placeholder="Confirme Clave"/>
+                </div>
+                <div>
+                    <input type="email" name="email" placeholder="Email"/>
+                </div>
+                <div>
+                    <input type="number" name="phonenumber" placeholder="Telefono"/>
+                </div>
+                <div>
+                	<div class = "medium">Ingrese su Fecha de Nacimiento: </div><br>
+                	<input type="date" name="bday">
+                </div>
+                <!-- <div>
+                    <div class="small">this textarea is just for test so you can see the placeholder working on textarea as well</div>
+                    <textarea name="message" placeholder="Message"></textarea>
+                </div>  -->
+                <div>
+                	<div class = "medium">Ingrese su sexo: </div><br>
+                	<form action="">
+					  <input type="radio" name="gender" value="male"> Masculino<br>
+					  <input type="radio" name="gender" value="female"> Femenino<br>
+					  <input type="radio" name="gender" value="other"> Otro
+					</form>
+                </div>
+                <div>
+                	<div class="medium">Indique sus intereses: </div><br>
+                	<form action="">
+					<input type="checkbox" name="vehicle" value="Bike">Deportes
+					<input type="checkbox" name="vehicle" value="Bike">Cine<br>
+					<input type="checkbox" name="vehicle" value="Bike">Arte
+					<input type="checkbox" name="vehicle" value="Bike">Musica<br>
+					<input type="checkbox" name="vehicle" value="Bike">Política
+					<input type="checkbox" name="vehicle" value="Car">Economía 
+					</form>
+                </div>  
+                 <div>
+                 	<div class="medium">Seleccione el motivo del registro: </div><br>
+                 	<select>
+					  <option value="prueba">Prueba de proyecto</option>
+					  <option value="evaluacion">Evaluación de alumno</option>
+					  <option value="ocio">Ocio en su máxima expresión</option>
+					  <option value="casualidad">Casualidad</option>
+					</select>
+                 </div>
+                 <br>
+                 <div>
+                 	<div class="medium">Cual es su color favorito?: </div><br>
+                 	<form action="action_page.php">
+					  <input type="color" name="favcolor" value="#ff0000">
+					</form>
+                 </div>
+                 <br>
+                <input type="submit" name="submit" value="ENVIAR"/>
+            </fieldset>    
+        </form>
+    </div>
 </body>
 </html>
